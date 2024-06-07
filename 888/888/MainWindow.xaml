@@ -1,0 +1,33 @@
+﻿<Window x:Class="_888.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_888"
+        mc:Ignorable="d"
+        Title="Восьмая" Height="450" Width="800">
+    <Window.Icon>
+        <BitmapImage UriSource="C:\Users\Ringer\source\repos\888\888\Properties\MPT" />
+    </Window.Icon>
+
+    <Grid Background="{DynamicResource Background}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Foreground="{DynamicResource Text}" Content="Светлая" Grid.Column="2" Grid.Row="2" Height="61" VerticalAlignment="Center" HorizontalAlignment="Center" Width="219" Click="LightTheme_Button_Click" Background="{DynamicResource Buttom}"/>
+        <TextBox Foreground="{DynamicResource Text}" Grid.Column="0" x:Name="inputText" Grid.ColumnSpan="3" Margin="10,0,0,0" Text="Введите текст..." Height="31" VerticalAlignment="Center" HorizontalAlignment="Center" Width="780" Background="{DynamicResource Buttom}" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+        <Button Foreground="{DynamicResource Text}" Content="Тёмная" Grid.Column="2" Grid.Row="3" Height="61" VerticalAlignment="Center" HorizontalAlignment="Center" Width="219" Click="DarkTheme_Button_Click" Background="{DynamicResource Buttom}"/>
+        <Button Foreground="{DynamicResource Text}" Content="Десериализовать" Grid.Column="1" Grid.Row="1" Height="61" VerticalAlignment="Center" HorizontalAlignment="Center" Width="219" Click="Des_Button_Click" Background="{DynamicResource Buttom}"/>
+        <Button Foreground="{DynamicResource Text}" Content="Сериализовать" Grid.Row="1" Height="61" VerticalAlignment="Center" HorizontalAlignment="Center" Width="219" Click="Ser_Button_Click" Background="{DynamicResource Buttom}"/>
+        <TextBlock Foreground="{DynamicResource Text}" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Text="Темы: "  Height="61" Width="219" VerticalAlignment="Center" Background="{DynamicResource Buttom}"/>
+        <TextBox x:Name="outputText" Foreground="{DynamicResource Text}" Grid.Row="2" Grid.ColumnSpan="2" Text="Вывод десериализованного текста:" Height="61" VerticalAlignment="Center" HorizontalAlignment="Center" Width="485" Background="{DynamicResource Buttom}" IsReadOnly="True"/>
+    </Grid>
+</Window>
